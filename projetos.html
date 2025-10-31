@@ -3,48 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meus Projetos</title>
-    <link rel="stylesheet" href="style1.css">
+    <title>Meus Projetos - Vinicius Bulhões Porto</title>
+    <link rel="stylesheet" href="styleproj.css">
 </head>
 <body>
-    <div class="container">
+    
+    <aside class="sidebar" id="sidebar">
+        <h2>Menu</h2>
         <nav>
             <ul>
-                <li>
-                    <a href="index.html">Sobre Mim</a>
-                </li>
-                <li>
-                    <a href="projetos.html">Projetos</a>
-                </li>
-                <li>
-                    <a href="contato.html">Contato</a>
-                </li>
+                <li><a href="index.html#sobre">Sobre Mim</a></li>
+                <li><a href="projetos.html" onclick="toggleSidebar()">Meus Projetos</a></li>
+                <li><a href="contato.html">Contato</a></li>
             </ul>
         </nav>
 
-        <header>
-            <h1>Vinicius Bulhões Porto</h1>
-            <h2>Analise e Desenvolvimento de Sistemas</h2>
-        </header>
+        <div class="sidebar-footer">
+            <a href="https://github.com/ViniBulhoes" target="_blank" rel="noopener noreferrer">
+                <img src="img/Github.svg" alt="">
+                <p>Github</p>
+            </a>
+            <a href="https://www.linkedin.com/in/viniciusbulhoesporto/" target="_blank" rel="noopener noreferrer">
+                <img src="img/linkedin.svg" alt="">
+                <p>Linkedin</p>
+            </a>
+            <a href="https://www.instagram.com/bulhoes_vini?igsh=MTRrMHdjazFzbTl5eA==" target="_blank" rel="noopener noreferrer">
+                <img src="img/Instagram.svg" alt="">
+                <p>Instagram</p>
+            </a>
+        </div>
+    </aside>
 
-        <main>
-            <section>
-                <h3>Meus Projetos</h3>
-                <p>Este espaço foi criado para apresentar meus projetos e iniciativas profissionais. Em breve, você encontrará aqui uma seleção dos trabalhos que venho desenvolvendo, com foco em qualidade, inovação e resultados. Acompanhe para conhecer mais sobre minha trajetória e contribuições.</p>
-            </section>
-            <section>
-                <h3>Lista de Projetos Realizados</h3>
-                <a href="https://vinibulhoes.github.io/Amor/" target="_blank" rel="noopener noreferrer"> Dia Dos Namorados</a>
-                <p>Mais projetos serão adicionados em breve...</p>
-            </section>
-            <br><br><br><br><br><br><br><br><br><br><br>
-        </main>
+    <button class="sidebar-toggle" onclick="toggleSidebar()" aria-label="Abrir menu">
+        ☰
+    </button>
 
-        <footer>
-            <a href="https://github.com/ViniBulhoes" target="_blank" rel="noopener noreferrer"><img src="img/Github.svg" alt=""><p>Github</p></a>
-            <a href="https://www.linkedin.com/in/viniciusbulhoesporto/" target="_blank" rel="noopener noreferrer"><img src="img/linkedin.svg" alt=""><p>Linkedin</p></a>
-            <a href="https://www.instagram.com/bulhoes_vini?igsh=MTRrMHdjazFzbTl5eA==" target="_blank" rel="noopener noreferrer"><img src="img/Instagram.svg" alt=""><p>Instagram</p></a>
-        </footer>
+    <div class="overlay" onclick="toggleSidebar()"></div>
+
+    <div class="main-content">
+        <div class="container">
+            <header>
+                <h1>Vinicius Bulhões Porto</h1>
+                <h2>Análise e Desenvolvimento de Sistemas</h2>
+            </header>
+
+            <main>
+                <section>
+                    <h3>Meus Projetos</h3>
+                    <p>Este espaço foi criado para apresentar meus projetos e iniciativas profissionais. <br><br> Em breve, você encontrará aqui uma seleção dos trabalhos que venho desenvolvendo, com foco em qualidade, inovação e resultados. Acompanhe para conhecer mais sobre minha trajetória e contribuições.</p>
+                </section>
+
+                <section>
+                    <h3>Lista de Projetos Realizados</h3>
+                    <p>• <a href="https://vinibulhoes.github.io/Amor/" target="_blank" rel="noopener noreferrer">Dia Dos Namorados</a> </p>
+                    <br><br>
+                    <p>Mais projetos serão adicionados em breve...</p>
+                </section>
+            </main>
+        </div>
     </div>
+
+    <a href="https://wa.me/5511997092512" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contato WhatsApp">
+        <img src="img/whatsapp.png" alt="WhatsApp" class="whatsapp-icon" loading="lazy" />
+    </a>
+
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.querySelector('.overlay');
+            
+            sidebar.classList.toggle('active');
+            overlay.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
