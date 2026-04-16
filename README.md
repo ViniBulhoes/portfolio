@@ -24,6 +24,7 @@ Este projeto foi desenvolvido utilizando:
 HTML5
 CSS3
 JavaScript
+
 🎯 Objetivo
 
 O objetivo deste portfólio é centralizar e apresentar meus projetos e experiências de forma clara, servindo como vitrine para oportunidades na área de tecnologia.
