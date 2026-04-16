@@ -172,6 +172,13 @@
 .level-dot.on { background: var(--accent); }
 
 /* ── Education ── */
+
+.edu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 .edu-card {
   background: var(--bg-card);
   border: 1px solid var(--border);
